@@ -56,6 +56,9 @@ const styles = StyleSheet.create({
   week: {
     flexDirection: 'row'
   },
+  currentMonth: {
+    fontSize: 14
+  },
   dayName: {
     flexGrow: 1,
     flexBasis: 1,
@@ -265,7 +268,7 @@ export default class Dates extends Component {
           <TouchableOpacity onPress={previousMonth}>
             <Text>{'< Previous'}</Text>
           </TouchableOpacity>
-          <Text>{this.state.focusedMonth.format('MMMM')}</Text>
+          <Text style={styles.currentMonth}>{this.state.focusedMonth.format('MMMM')}</Text>
           <TouchableOpacity onPress={nextMonth}>
             <Text>{'Next >'}</Text>
           </TouchableOpacity>
