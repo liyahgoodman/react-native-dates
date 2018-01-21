@@ -48,6 +48,9 @@ const defaultStyles = StyleSheet.create({
   calendar: {
     backgroundColor: 'rgb(255, 255, 255)'
   },
+  currentMonth: {
+    fontSize: 14
+  },
   heading: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -270,7 +273,7 @@ export default class Dates extends Component {
           <TouchableOpacity onPress={previousMonth}>
             <Text>{'< Previous'}</Text>
           </TouchableOpacity>
-          <Text>{this.state.focusedMonth.format('MMMM')}</Text>
+          <Text style={styles.currentMonth}>{this.state.focusedMonth.format('MMMM')}</Text>
           <TouchableOpacity onPress={nextMonth}>
             <Text>{'Next >'}</Text>
           </TouchableOpacity>
